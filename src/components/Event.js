@@ -3,16 +3,16 @@ import EditableTitle from './editables/EditableTitle';
 //import EditableDateRange from './editables/EditableDateRange';
 import EditableBody from './editables/EditableBody';
 
-const Event = ({event, saveEdit, isLoading}) => {
+const Event = ({event, updateEvent, loading}) => {
       /*<EditableDateRange className="event-date" from={event.startDate} to={event.endDate} />
       */
   const editEvent = (objectDiff) => {
     let newEvent = Object.assign({}, event, objectDiff);
-    saveEdit(newEvent);
+    updateEvent(newEvent);
   }
 
   let eventDisplay;
-  if (isLoading) {
+  if (loading) {
     eventDisplay = (
       <div>Loading...</div>
     );

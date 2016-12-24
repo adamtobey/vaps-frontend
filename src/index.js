@@ -10,7 +10,7 @@ import Home from './pages/Home.js';
 import Events from './pages/Events.js';
 import SingleEvent from './pages/SingleEvent.js';
 
-import store from './reduxStore';
+import store from './state/reduxStore';
 
 ReactDOM.render((
 	<Provider store={store}>
