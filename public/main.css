@@ -51,18 +51,18 @@ header.main-header {
       max-height: 100%;
       height: auto; }
 
-article.single-event .date, article.single-event .location {
-  font-style: italic; }
-
 main.content {
   background-color: white;
   color: #32363e;
-  font-family: "Belleza", sans-serif; }
+  font-family: "Belleza", sans-serif;
+  display: inline-block;
+  width: 100vw;
+  max-width: inherit;
+  padding: 25px 35px 40px 35px; }
 
 article {
   font-family: "Sorts Mill Goudy", serif;
   font-size: 1.3em;
-  padding: 25px 35px 40px 35px;
   max-width: 1350px;
   margin: auto; }
   article > * {
@@ -95,6 +95,13 @@ article {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+
+article.single-event .date, article.single-event .location {
+  font-style: italic; }
+
+.event-list {
+  max-width: 1200px;
+  margin: auto; }
 
 * {
   box-sizing: border-box; }

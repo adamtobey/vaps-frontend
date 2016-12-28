@@ -5,4 +5,8 @@ main.content {
   background-color: $color-content-background;
   color: $color-text-main;
   font-family: $font-sans-main;
+  display: inline-block;
+  width: 100vw;
+  max-width: inherit;
+  padding: 25px 35px 40px 35px;
 }

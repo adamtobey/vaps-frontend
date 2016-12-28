@@ -3,9 +3,12 @@
 
 // fragments
 @import 'header';
-@import 'single-event';
 @import 'page-common';
 @import 'article-common';
+
+// page-fragments
+@import 'single-event';
+@import 'events-list';
 
 * {
   box-sizing: border-box;
