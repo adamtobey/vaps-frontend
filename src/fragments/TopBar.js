@@ -3,20 +3,18 @@ import {Link, IndexLink} from 'react-router';
 import banner from '../assets/VAPS-logo.png';
 
 const TopBar = (props) => {
-	let containerStyle = {
-		backgroundColor: "#649570"
-	};
-	let imgStyle = {
-		maxWidth: "100%",
-		maxHeight: 66
-	};
 	return (
-		<header style={containerStyle}>
-			<img src={banner} alt="VAPS" style={imgStyle}/>
+		<header className="main-header">
+			<span className="account-toolbar">
+				<button className="login">Log In</button>
+			</span>
 			<nav className="main-nav">
 				<IndexLink to="/">Home</IndexLink>
 				<Link to="/events">Events</Link>
 			</nav>
+			<div className="brand">
+				<img src={banner} alt="VAPS" />
+			</div>
 		</header>
 	);
 }

@@ -4,9 +4,11 @@ import Event from '../components/Event.js';
 
 const SingleEvent = (props) => {
   return (
-    <EventSupplier eventId={props.params.eventId}>
-      <Event />
-    </EventSupplier>
+    <main className="content">
+      <EventSupplier eventId={props.params.eventId}>
+        <Event />
+      </EventSupplier>
+    </main>
   );
 }
 

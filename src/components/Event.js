@@ -10,7 +10,6 @@ const Event = ({event, updateEvent, loading}) => {
     let newEvent = Object.assign({}, event, objectDiff);
     updateEvent(newEvent);
   }
-
   let eventDisplay;
   if (loading) {
     eventDisplay = (
@@ -19,9 +18,16 @@ const Event = ({event, updateEvent, loading}) => {
   } else {
     eventDisplay = (
       <article className="single-event">
-        <EditableTitle className="event-title" editable={true} text={event.title}
-          onEdit={(title) => editEvent({title})} />
-        <EditableBody className="event-body" editable={true} text={event.body}
+        <header>
+          <EditableTitle editable={true} text={event.title}
+            onEdit={(title) => editEvent({title})} />
+          <button className="purchase-event">$37.68</button>
+        </header>
+        <div className="sub-header-info">
+          <span className="date">Jan 18 - Feb 23</span>
+          <span className="location">Fun Event Hall</span>
+        </div>
+        <EditableBody className="body" editable={true} text={event.body}
           onEdit={(body) => editEvent({body})} />
       </article>
     );

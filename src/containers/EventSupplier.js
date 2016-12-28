@@ -56,11 +56,17 @@ class EventSupplier extends React.Component {
     let suppliedChildren = React.Children.map(this.props.children, (child) =>
       React.cloneElement(child, {event, updateEvent, loading})
     );
-    return (
-      <div className="single-event-container">
-        {suppliedChildren}
-      </div>
-    );
+    let renderElement = <span></span>;
+    if (suppliedChildren.length === 1) {
+      renderElement = suppliedChildren[0];
+    } else {
+      renderElement = (
+        <div className="single-event-container">
+          {suppliedChildren}
+        </div>
+      )
+    }
+    return renderElement;
   }
 };
 
