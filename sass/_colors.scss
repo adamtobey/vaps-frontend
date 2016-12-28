@@ -1,0 +1,16 @@
+/// Palette Definition
+$vaps-green: hsl(139, 52, 37);
+$accent-blue: hsl(212, 88, 23);
+$slate-gray: hsl(222, 11, 22);
+
+/// Theme Colors
+$color-main: $vaps-green;
+$color-main-light: mix($color-main, white);
+$color-accent-neutral: $accent-blue;
+$color-background: $slate-gray;
+$color-content-background: white;
+$color-text-main: $slate-gray;
+$color-text-accent: white;
+
+/// Utility colors
+$clear: rgba(0, 0, 0, 0);

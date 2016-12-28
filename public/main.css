@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy");
+@import url("https://fonts.googleapis.com/css?family=Belleza");
+header.main-header {
+  background-color: #2d8f4c;
+  color: white;
+  font-size: 2em;
+  font-family: "Sorts Mill Goudy", serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  overflow: hidden; }
+  header.main-header > * {
+    display: inline-block;
+    padding: 10px; }
+  header.main-header .account-toolbar {
+    flex-shrink: 0;
+    font-size: 80%; }
+    header.main-header .account-toolbar button {
+      background-color: transparent;
+      border: inherit;
+      color: inherit;
+      font: inherit;
+      font-size: inherit; }
+    header.main-header .account-toolbar button:hover {
+      color: #2d8f4c;
+      background-color: white; }
+  header.main-header nav {
+    flex-shrink: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    header.main-header nav a {
+      color: inherit;
+      text-decoration: inherit;
+      padding: 0px 10px 0px 10px; }
+    header.main-header nav a:hover {
+      color: #2d8f4c;
+      background-color: white; }
+  header.main-header .brand {
+    height: 75px;
+    flex-basis: 320px;
+    max-width: 480px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: auto;
+    display: flex;
+    align-items: center; }
+    header.main-header .brand img {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto; }
+
+article.single-event .date, article.single-event .location {
+  font-style: italic; }
+
+main.content {
+  background-color: white;
+  color: #32363e;
+  font-family: "Belleza", sans-serif; }
+
+article {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1.3em;
+  padding: 25px 15px 10px 15px;
+  max-width: 1350px;
+  margin: auto; }
+  article .body {
+    max-width: 1200px;
+    margin: auto; }
+  article h1, article h2, article h3 {
+    font-family: "Belleza", sans-serif; }
+  article h1 {
+    font-size: 2.5em; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0px;
+  background-color: #32363e; }
+
+.width-fix {
+  max-width: 1600px;
+  margin: auto; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,74 @@
+@import 'colors';
+@import 'fonts';
+
+$navbar-line-height: 75px;
+
+header.main-header {
+  background-color: $color-main;
+  color: $color-text-accent;
+  font-size: 2em;
+  font-family: $font-serif-main;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  overflow: hidden;
+
+  > * {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .account-toolbar {
+    flex-shrink: 0;
+    font-size: 80%;
+
+    button {
+      background-color: $clear;
+      border: inherit;
+      color: inherit;
+      font: inherit;
+      font-size: inherit;
+    }
+
+    button:hover {
+      color: $color-main;
+      background-color: $color-text-accent;
+    }
+  }
+
+  nav {
+    flex-shrink: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+      padding: 0px 10px 0px 10px;
+    }
+
+    a:hover {
+      color: $color-main;
+      background-color: $color-text-accent;
+    }
+  }
+
+  .brand {
+    height: $navbar-line-height;
+    flex-basis: 320px;
+    max-width: 480px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: auto;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+    }
+  }
+}

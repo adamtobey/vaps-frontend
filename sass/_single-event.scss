@@ -1,0 +1,8 @@
+@import 'colors';
+@import 'fonts';
+
+article.single-event {
+  .date, .location {
+    font-style: italic;
+  }
+}

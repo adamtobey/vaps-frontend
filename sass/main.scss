@@ -1,0 +1,22 @@
+@import 'colors';
+@import 'requires';
+
+// fragments
+@import 'header';
+@import 'single-event';
+@import 'page-common';
+@import 'article-common';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background-color: $color-background;
+}
+
+.width-fix {
+  max-width: 1600px;
+  margin: auto;
+}
