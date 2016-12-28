@@ -3,20 +3,52 @@
 article {
   font-family: $font-serif-main;
   font-size: 1.3em;
-  padding: 25px 15px 10px 15px;
+  padding: 25px 35px 40px 35px;
   max-width: 1350px;
   margin: auto;
 
-  .body {
+  > * {
     max-width: 1200px;
     margin: auto;
   }
 
-  h1, h2, h3 {
-    font-family: $font-sans-main;
+  .body {
+    text-align: justify;
   }
 
-  h1 {
-    font-size: 2.5em;
+  header, footer {
+    font-size: 1.6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-sans-main;
+
+    * {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: $clear;
+      border: inherit;
+      color: $color-accent-neutral;
+      font: inherit;
+      font-size: 0.85em;
+    }
+
+    button:hover {
+      color: $color-content-background;
+      background-color: $color-accent-neutral;
+    }
   }
+
+  .sub-header-info {
+    padding: 0px 45px 0px 45px;
+    font-size: 0.85em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 }
