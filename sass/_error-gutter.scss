@@ -1,0 +1,10 @@
+@import 'colors';
+@import 'fonts';
+
+#error-gutter.error {
+  padding: 15px;
+  background-color: $color-accent-neutral;
+  color: $color-text-accent;
+  font-family: $font-serif-main;
+  font-size: 1.3em;
+}

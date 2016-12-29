@@ -8,7 +8,8 @@ const ErrorGutter = ({errors}) => {
     text: "An unknown error occurred."
   };
   errors = errors.map(e => e && e.text ? e : unknownError);
-  return (<div className="error-gutter">
+  let className = errors.length > 0 ? 'error' : '';
+  return (<div id="error-gutter" className={className}>
     {errors.map(er => (
       <span className="error" key={errorCounter++}>{er.text}</span>
     ))}
