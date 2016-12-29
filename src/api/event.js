@@ -1,3 +1,5 @@
+const defaultError = {text: "Failed to reach server. Reverting..."};
+
 export function mockFetchEvent(id) {
   return new Promise((resolve, reject) => {
   	let nowDate = new Date(Date.now());
@@ -15,7 +17,7 @@ export function mockFetchEvent(id) {
   });
 }
 
-export function mockFetchEventWithError(id, error="default") {
+export function mockFetchEventWithError(id, error=defaultError) {
   return new Promise((resolve, reject) => {
     reject(error);
   });
@@ -27,7 +29,7 @@ export function mockUpdateEvent(id, event) {
   });
 }
 
-export function mockUpdateEventWithError(id, event, error="default") {
+export function mockUpdateEventWithError(id, event, error=defaultError) {
   return new Promise((resolve, reject) => {
     setTimeout(() => reject(error), 500);
   });

@@ -21,7 +21,11 @@ class EventSupplier extends React.Component {
     });
   }
   setError(error) {
-    this.props.raiseError(makeUniqueId(), error);
+    console.log(error);
+    // TODO race condition?
+    let id = makeUniqueId();
+    this.props.raiseError(id, error);
+    setTimeout(() => this.props.settleError(id), 5000);
     this.setState({
       event: {},
       loading: false
@@ -42,7 +46,7 @@ class EventSupplier extends React.Component {
     updateEvent(this.props.eventId, newEvent)
       .then(this.setEvent.bind(this))
       .catch(err => {
-        this.props.raiseError(err);
+        this.setError(err);
         this.setState({
           event: this.state.fallbackEvent,
           fallbackEvent: undefined
