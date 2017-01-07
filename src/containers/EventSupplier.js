@@ -21,7 +21,6 @@ class EventSupplier extends React.Component {
     });
   }
   setError(error) {
-    console.log(error);
     // TODO race condition?
     let id = makeUniqueId();
     this.props.raiseError(id, error);
@@ -29,7 +28,7 @@ class EventSupplier extends React.Component {
     this.setState({
       event: {},
       loading: false
-    })
+    });
   }
   setEvent(event) {
     let lastErr = this.state.fetchErrorId;

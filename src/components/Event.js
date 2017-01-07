@@ -1,7 +1,5 @@
 import React from 'react';
-import EditableTitle from './editables/EditableTitle';
-//import EditableDateRange from './editables/EditableDateRange';
-import EditableBody from './editables/EditableBody';
+import {EditableRichText} from './editables/EditableComponents';
 
 const Event = ({event, updateEvent, loading}) => {
       /*<EditableDateRange className="event-date" from={event.startDate} to={event.endDate} />
@@ -19,16 +17,24 @@ const Event = ({event, updateEvent, loading}) => {
     eventDisplay = (
       <article className="single-event">
         <header>
-          <EditableTitle editable={true} text={event.title}
-            onEdit={(title) => editEvent({title})} />
+          <EditableRichText
+            initialData={event.title || ""}
+            editable={true}
+            onEdit={title => editEvent({title})}
+            wrapper={<h1></h1>}
+          />
           <button className="purchase-event">$37.68</button>
         </header>
         <div className="sub-header-info">
           <span className="date">Jan 18 - Feb 23</span>
           <span className="location">Fun Event Hall</span>
         </div>
-        <EditableBody className="body" editable={true} text={event.body}
-          onEdit={(body) => editEvent({body})} />
+        <EditableRichText
+          initialData={event.body || ""}
+          editable={true}
+          onEdit={body => editEvent({body})}
+          wrapper={<div className="body"></div>}
+        />
       </article>
     );
   }

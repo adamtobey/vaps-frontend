@@ -1,5 +1,6 @@
 const defaultError = {text: "Failed to reach server. Reverting..."};
 
+// TODO make cancelable promises
 export function mockFetchEvent(id) {
   return new Promise((resolve, reject) => {
   	let nowDate = new Date(Date.now());
